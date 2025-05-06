@@ -1,14 +1,14 @@
 -- LazyWal.vim/lua/lazywal/theme.lua
-local Util = require("lazyvim.util")
+local Util = require("lazywal.util")
 
 local M = {}
 
 ---@param opts? lazyvim.Config
 function M.setup(opts)
-  opts = require("lazyvim.config").extend(opts)
+  opts = require("lazywal.config").extend(opts)
 
-  local colors = require("lazyvim.colors").setup(opts)
-  local groups = require("lazyvim.groups").setup(colors, opts)
+  local colors = require("lazywal.colors").setup(opts)
+  local groups = require("lazywal.groups").setup(colors, opts)
 
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
@@ -16,7 +16,7 @@ function M.setup(opts)
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "lazyvim-" .. opts.style
+  vim.g.colors_name = "lazywal-" .. opts.style
 
   for group, hl in pairs(groups) do
     hl = type(hl) == "string" and { link = hl } or hl

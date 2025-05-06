@@ -1,10 +1,10 @@
----@class lazyvim.Highlight: vim.api.keyset.highlight
+---@class lazywal.Highlight: vim.api.keyset.highlight
 ---@field style? vim.api.keyset.highlight
 
----@alias lazyvim.Highlights table<string,lazyvim.Highlight|string>
+---@alias lazywal.Highlights table<string,lazywal.Highlight|string>
 
----@alias lazyvim.HighlightsFn fun(colors: ColorScheme, opts:lazyvim.Config):lazyvim.Highlights
+---@alias lazywal.HighlightsFn fun(colors: ColorScheme, opts:lazywal.Config):lazywal.Highlights
 
----@class lazyvim.Cache
----@field groups lazyvim.Highlights
+---@class lazywal.Cache
+---@field groups lazywal.Highlights
 ---@field inputs table
